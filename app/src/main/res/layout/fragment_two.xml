@@ -3,29 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TwoFragment">
+    tools:context=".TwoFragment"
+    android:background="@color/white"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:paddingTop="50dp"
         android:layout_margin="40sp">
         <TextView
-            android:id="@+id/sname"
+
+            android:id="@+id/saveName"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">
 
         </TextView>
         <TextView
-            android:id="@+id/sdob"
+            android:id="@+id/savedob"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">
 
         </TextView>
         <TextView
-            android:id="@+id/sgender"
+            android:id="@+id/savegender"
+            android:textColor="@color/black"
+            android:textSize="30sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">

@@ -22,9 +22,9 @@ public class TwoFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_two, container, false);
 
-        sname=view.findViewById(R.id.sname);
-        sdob=view.findViewById(R.id.sdob);
-        sgender=view.findViewById(R.id.sgender);
+        sname=view.findViewById(R.id.saveName);
+        sdob=view.findViewById(R.id.savedob);
+        sgender=view.findViewById(R.id.savegender);
 
        Bundle bundle = this.getArguments();
 

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -37,9 +38,6 @@ public class OneFragment extends Fragment implements AdapterView.OnItemSelectedL
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.fragment_one);
-        // Inflate the layout for this fragment
-        // return
 
         View view = inflater.inflate(R.layout.fragment_one, container, false);
 
@@ -92,15 +90,17 @@ public class OneFragment extends Fragment implements AdapterView.OnItemSelectedL
 
                 if (isAllFieldsChecked) {
 
-                    TwoFragment twoFragment=new TwoFragment();
-
-
                     Bundle bundle = new Bundle();
                     bundle.putString("NAME",name);
                     bundle.putString("DOB",dobirth);
                     bundle.putString("GENDER",itemText);
+                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                    TwoFragment twoFragment=new TwoFragment();
                     twoFragment.setArguments(bundle);
-                    getChildFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,twoFragment).commit();
+                   // getChildFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,twoFragment).commit();
+
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, twoFragment).addToBackStack(null).commit();
 
                 }
 
